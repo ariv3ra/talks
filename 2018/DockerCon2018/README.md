@@ -12,7 +12,7 @@ CircleCI’s images for popular languages + frameworks have over 38M+ pulls on D
 
 In this session, CircleCI CTO Rob Zuber will share some lessons learned in running Docker at scale, across thousands of customers, their language + technology choices, and their environments. With over 350,000 users and 10M+ jobs per month, we’ve seen up close how customers can succeed with Docker, and how to avoid potential issues.
 
-## Outline
+## Talk Outline
 - My Introduction
     - Who, What, Where
 - CircleCI Introduction
@@ -42,8 +42,23 @@ In this session, CircleCI CTO Rob Zuber will share some lessons learned in runni
 
 ## Talk Script
 
-### Slide 1
-Hi my name is Angel Rivera & I'm a Developer Advocate for CircleCI. As a Developer Advocate my job is to directly engage the developers & the community.
+### Slide 1: My Introduction
+Welcome everyone. Some of you are probably expecting Rob Zuber CircleCi's awesome CTO but unfortunately he is unable to present so I'll be subbing for him today and I'm really EXCITED to be speaking to all of you.
+
+So my name is Angel Rivera & I'm a Developer Advocate for CircleCI. As a Developer Advocate my job is to directly engage developers... & you the community. 
+Before we begin I want you all to know that this is my 1st conference talk as a CircleCI Developer Advocate and I intend to make it legit.
+
+I know this talk is billed as "Lessons Learned Running Docker at Extreme Scale" but I'd to switch things up today and go a bit lighter on the slides & heavier on a demo. I want to keep you all engaged & demonstrate what Continuos Integration\Continuous Deployment is and how to implement it using CircleCI.
+
+So lets jump in 
+
+## Slide 2: What is CircleCI
+CircleCI is a Continuos Integration Continuos Delivery\Deployment platform that enables developers to rapidly release quality code by automating the build, test, and delivery process.
+
+Continuous Integration Continuous Delivery\Deployment is also known as CI\CD which is the term I'll be using moving forward.
+
+## Slide 3: CircleCi Version 1.0
+Version 1 of the platform 
 
 
 ## Tech Stacks
