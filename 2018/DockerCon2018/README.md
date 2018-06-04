@@ -38,7 +38,7 @@ In this session, CircleCI CTO Rob Zuber will share some lessons learned in runni
     - Push Fixed Code to repo
     - Show CircleCI build go Green
     - Have Audience go to hello.dpunks.org to see the app
-    - End of Demoß\Questions
+    - End of Demos\Questions
 
 ## Talk Script
 
@@ -48,12 +48,18 @@ Welcome everyone. Some of you are probably expecting Rob Zuber CircleCi's awesom
 So my name is Angel Rivera & I'm a Developer Advocate for CircleCI. As a Developer Advocate my job is to directly engage developers... & you the community. 
 Before we begin I want you all to know that this is my 1st conference talk as a CircleCI Developer Advocate and I intend to make it legit.
 
-I know this talk is billed as "Lessons Learned Running Docker at Extreme Scale" but I've decided to switch things up today and go a bit lighter on the slides & heavier on a demo. I want to keep you all engaged & demonstrate what Continuos Integration\Continuous Deployment is and how to implement it using CircleCI. So my apologies up front for switching it up on you.
+I know this talk is billed as "Lessons Learned Running Docker at Extreme Scale" I've decided to switch things up today and go a bit lighter on the slides & heavier on a demo. I want to keep you all engaged & demonstrate what Continuos Integration\Continuous Deployment is and how to implement it using CircleCI. So my apologies up front for switching it up on you.
 
 #### Slide: What is CircleCI
 CircleCI is a Continuos Integration Continuos Delivery\Deployment platform that enables developers to rapidly release quality code by automating the build, test, and delivery process.
 
 Quick show of hands how many of you are familiar with CI\CD?
+
+### Slide: CircleCI Version 1.0 - Pre Docker
+Version 1 of the platform was launched in 2011 before the Containerization Boom so it executes builds on dedicated VMs using a selection of Ubuntu Linux and for mobile builds Ubuntu w/ Android SDK & OSX for XCode code bases. v1.0 is an awesome innovation but as our business processes evolve & new technologies emerge so must our platform. As usage increased customers required flexibility in their pipelines.
+
+### Slides: CircleCI Version 2.0
+CircleCI addressed their customers needs in the form of v.20. I wasn't with the company during the v2.0 design but the team shared early v2.0 internal docs with me which illustrated their design & technology considerations. The teams thoroughly debated decisions such as whether or not to roll their own stack vs incorporating existing off the shelf solutions where appropriate. A topic that stood out to me was around choosing a containerization stack for the 
 
 ### Slide: CircleCI Stats
 CircleCI processes:
@@ -61,12 +67,6 @@ CircleCI processes:
 - 500K+ avg per weekday
 
 Our users are crushing it in regards to CI\CD.  Lots of quality code being written.
-
-### Slide: CircleCI Version 1.0 - Pre Docker
-Version 1 of the platform was launched in 2011 before the Containerization Boom so it executes builds on dedicated VMs using a selection of Ubuntu Linux and for mobile builds Ubuntu w/ Android SDK & OSX for XCode code bases.  v1.0 is an awesome innovation but as our business processes evolve & new technologies emerge so must our platform. As usage increased customers required flexibility in their pipelines.
-
-### Slides: CircleCI Version 2.0 - Post Docker
-As software companies do CircleCI addressed their customers needs in the form of v.20. I wasn't with the company during the v2.0 design but the team shared early v2.0 docs which illustrated their design & technology considerations.  The teams thoroughly debated & vetted technologies 
 
 
 ## Tech Stacksß
