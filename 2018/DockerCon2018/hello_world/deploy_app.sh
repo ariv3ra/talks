@@ -5,11 +5,26 @@
 #
 ########################################
 
-echo "Deploying Hello World to Docker Container"
-docker stop hello_world
-/bin/cp /tmp/hello_world /root/hello_world
+set -e
 
-echo "Starting Hello World in Docker Container"
-docker run -d --rm=true -p 80:5000 -v /root/:/root/ -w /root/ -u root && \
-    --name hello_world python:2.7.14 ./hello_world
+DOCKER_IMAGE=$1
+CONAINER_NAME="hello_world"
+
+# Check for arguments
+if [[ $# -lt 1 ]] ; then
+    echo '[ERROR] You must supply a Docker Image to pull'
+    exit 1
+fi
+
+echo "Deploying Hello World to Docker Container"
+
+#Check for running container & stop it before starting a new one
+if [ $(docker inspect -f '{{.State.Running}}' $CONAINER_NAME) = "true" ]; then
+    docker stop hello_world
+fi
+
+echo "Starting Hello World using Docker Image name: $DOCKER_IMAGE"
+
+docker run -d --rm=true -p 80:5000  --name hello_world $DOCKER_IMAGE
+
 docker ps -a
