@@ -5,6 +5,7 @@ app = Flask(__name__)
 def wrap_html(message):
     html = """
         <html>
+        <body>
             <div style='font-size:120px;'>
             <center>
                 <image height="200" width="800" src="https://infosiftr.com/wp-content/uploads/2018/01/unnamed-2.png">
@@ -12,8 +13,8 @@ def wrap_html(message):
                 {0}<br>
             </center>
             </div>
-        </html>
-    """.format(message)
+        </body>
+        </html>""".format(message)
     return html
 
 @app.route('/')

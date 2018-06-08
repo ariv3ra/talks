@@ -11,38 +11,49 @@ CircleCI’s images for popular languages + services have over 38M+ pulls on Doc
 In this session, CircleCI Developer Advocate Angel Rivera will offer Docker & CircleCI to demonstrate how developers can easily integrate CI/CD pipelines into their projects and securely, build, test, release & deploy production ready Docker images.
 
 ## Talk Outline
+
 - Introduction
     - Introduce & talk
+    - Before we started this is my first conference talk as an official CircleCI Developer Advocate so... you all know have bragging rights!
+
 - CircleCI
-    - What is CircleCI?
+    - Quick show of hands who uses CircleCI?
+    - CircleCI is a Continuos Integration Continuos Delivery\Deployment platform that provides rapid release of quality code by automating the build, test, and delivery process.
+    - Quality code delivered consistently and faster
+
+- CircleCI Stats
+    - These are some CircleCI stats
+    - Our users are crushing it!
+    - A contributing factor is our platform's utilization of Docker
+
+- CircleCI + Docker
+    - Docker sits in the core of the CircleCI platform
+    - This enables users to use any combination of Docker images and build environments to rapidly produce quality builds that run in all of their environments
+
 - "It worked on my box"
-    - Raise your hands if you've ever heard or uttered these words before
-    - Apps work on developers box but not in qa staging ort production
+    - Raise your hands if you've ever heard or uttered this phrase
+    - Apps work on developers box but not in qa staging or production
+
 - Reasons? `¯\_(ツ)_/¯`
     - Who knows? But...
-- Best guess Environments Don't Match
-    - Dev machine has missing, newer/older dependencies?
+
+- Inconsistent Environments
+    - Developers machine has missing, newer/older dependencies?
     - Invalid configurations?
     - Different OSs?
+
 - Dev != QA != Staging != Production
     - How do we equalize our environments?
+
 - Docker
     - Enables developers to mint environments using Docker images
+
 - Docker Images
     - Docker Images provide immutable & consistent templates for your environments
+
 - Docker: Dev == QA == Staging == Production
     - All your environments are mirrors including Production thanks to Docker Images
     - You can consistently spawn & run your apps regardless of which environment using Docker Images.
-- CircleCI
-    - 
-
-
-
-
-    - Decision factors
-
-- CircleCI Stats
-    - Speak to stats
 
 - Demo
     - Live code Python App
@@ -62,7 +73,7 @@ In this session, CircleCI Developer Advocate Angel Rivera will offer Docker & Ci
 
 ### Slide: My Introduction
 Welcome everyone! My is Angel Rivera & I'm a Developer Advocate for CircleCI.
-Before we begin I want you all to know that this is my 1st conference presentation as a Official CircleCI Developer Advocate so that means you all now have bragging rights. You can all say "Hey I was at Angel's first CircleCI conference talk.
+Before we begin I want you all to know that this is my 1st conference presentation as an Official CircleCI Advocate so that means you all now have bragging rights.
 
 ### Slide: CircleCI
 CircleCI is a Continuos Integration Continuos Delivery\Deployment platform that enables developers to rapidly release quality code by automating the build, test, and delivery process.
