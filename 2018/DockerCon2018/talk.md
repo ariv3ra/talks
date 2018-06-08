@@ -1,4 +1,4 @@
-# DockerCon 2018 - "Lessons Learned Running Docker at Extreme Scale"
+# DockerCon 2018 - "Build for Production using CI/CD Pipelines & Docker"
 ## Author: Angel Rivera
 
 ## Abstract
@@ -6,32 +6,52 @@ The ascendance of Docker has helped bring about about a new focus on some softwa
 
 We released CircleCI 2.0 with these values in mind, placing Docker at the core of our Continuous Integration platform and allowing customers to build projects on CircleCI using any combination of Docker images as build environments.
 
-CircleCI’s images for popular languages + frameworks have over 38M+ pulls on DockerHub. Docker images are an incredible asset for ensuring that your dev and production environments are mirrors. But, with every new technology comes added complexity and management overhead.
+CircleCI’s images for popular languages + services have over 38M+ pulls on DockerHub. Docker images are an incredible asset for ensuring that your dev and production environments are mirrors.
 
-In this session, CircleCI CTO Rob Zuber will share some lessons learned in running Docker at scale, across thousands of customers, their language + technology choices, and their environments. With over 350,000 users and 10M+ jobs per month, we’ve seen up close how customers can succeed with Docker, and how to avoid potential issues.
+In this session, CircleCI Developer Advocate Angel Rivera will offer Docker & CircleCI to demonstrate how developers can easily integrate CI/CD pipelines into their projects and securely, build, test, release & deploy production ready Docker images.
 
 ## Talk Outline
-- My Introduction
-    - Introduce yourself
-- Agenda
-    - Set Presentation Expectations 
-- Brief history of v1.0 tech stack
-    - How did it used to be?
-- Intro into 2.0
-    - What changed from 1.0
-- Why Docker?
+- Introduction
+    - Introduce & talk
+- CircleCI
+    - What is CircleCI?
+- "It worked on my box"
+    - Raise your hands if you've ever heard or uttered these words before
+    - Apps work on developers box but not in qa staging ort production
+- Reasons? `¯\_(ツ)_/¯`
+    - Who knows? But...
+- Best guess Environments Don't Match
+    - Dev machine has missing, newer/older dependencies?
+    - Invalid configurations?
+    - Different OSs?
+- Dev != QA != Staging != Production
+    - How do we equalize our environments?
+- Docker
+    - Enables developers to mint environments using Docker images
+- Docker Images
+    - Docker Images provide immutable & consistent templates for your environments
+- Docker: Dev == QA == Staging == Production
+    - All your environments are mirrors including Production thanks to Docker Images
+    - You can consistently spawn & run your apps regardless of which environment using Docker Images.
+- CircleCI
+    - 
+
+
+
+
     - Decision factors
-- Lessons Learned
-    - Bad parts
-    - Good parts
+
+- CircleCI Stats
+    - Speak to stats
+
 - Demo
     - Live code Python App
     - Live code python unittest
-    - Live code v2.0 CircleCI config
+    - Discuss v2.0 CircleCI config
         - add ssh keys
         - run tests
         - Wire up a deploy to Digital Ocean Server via Docker
-    - Push "broken: code to repo cause build failure
+    - Push "broken" code to repo & cause build failure
         - Fix code
     - Push Fixed Code to repo
     - Show CircleCI build go Green
@@ -41,10 +61,11 @@ In this session, CircleCI CTO Rob Zuber will share some lessons learned in runni
 ## Talk Script
 
 ### Slide: My Introduction
-Welcome everyone. Some of you are expecting Rob Zuber CircleCi's awesome CTO but unfortunately he is unable to present so I'll be subbing for him today and I'm really EXCITED to be speaking to all of you.
+Welcome everyone! My is Angel Rivera & I'm a Developer Advocate for CircleCI.
+Before we begin I want you all to know that this is my 1st conference presentation as a Official CircleCI Developer Advocate so that means you all now have bragging rights. You can all say "Hey I was at Angel's first CircleCI conference talk.
 
-So my name is Angel Rivera & I'm a Developer Advocate for CircleCI. As a Developer Advocate my job is to directly engage developers... & you the community. 
-Before we begin I want you all to know that this is my 1st conference talk as a CircleCI Developer Advocate and I intend to make it memorable.
+### Slide: CircleCI
+CircleCI is a Continuos Integration Continuos Delivery\Deployment platform that enables developers to rapidly release quality code by automating the build, test, and delivery process.
 
 ### Slide: hello.dpunks.org - Broken
 Before I start coding I'd like to ask everyone to open a browser & go to `hello.dpunks.org` & tell me what you see.  Just yell it out....
